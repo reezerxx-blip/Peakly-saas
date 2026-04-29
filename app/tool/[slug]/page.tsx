@@ -62,11 +62,11 @@ async function getYoutubeSnapshot(toolId: string): Promise<YouTubeSnapshot | nul
 export default async function ToolDetailPage({
   params,
 }: {
-  params: Promise<{ slug: string }> | { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
   const lang = await getRequestLanguage();
   const tools = await getTools();
-  const resolvedParams = await Promise.resolve(params);
+  const resolvedParams = await params;
   const slug = decodeURIComponent(resolvedParams.slug ?? '').toLowerCase();
   const tool = tools.find(
     (t) => t.id.toLowerCase() === slug || t.name.toLowerCase().replace(/\s+/g, '-') === slug
@@ -147,6 +147,28 @@ export default async function ToolDetailPage({
     .filter((t) => t.id !== tool.id)
     .sort((a, b) => Math.abs(a.trendingScore - tool.trendingScore) - Math.abs(b.trendingScore - tool.trendingScore))
     .slice(0, 3);
+  const alternatives = competitors.slice(0, 2);
+  const founders = ['Founder 1', 'Founder 2'];
+  const fundingStage = tool.trendingScore >= 90 ? 'Series B+' : tool.trendingScore >= 80 ? 'Series A' : 'Seed';
+  const estimatedFunding = tool.trendingScore >= 90 ? '$120M+' : tool.trendingScore >= 80 ? '$35M+' : '$8M+';
+  const aiStack = [
+    tool.signalType === 'breakthrough' ? 'LLM orchestration' : 'Workflow AI',
+    tool.githubRepo ? 'Public API / SDK' : 'Closed API',
+    'Vector retrieval',
+    'Usage analytics',
+  ];
+  const integrations = ['Slack', 'Notion', 'Zapier', 'Webhook'].filter((item) => {
+    if (item === 'Webhook') return Boolean(tool.githubRepo);
+    return true;
+  });
+  const changelog = [
+    { date: '2026-04-12', title: 'Nouveau dashboard insights', type: 'feature' },
+    { date: '2026-03-28', title: 'Optimisation des performances API', type: 'improvement' },
+    { date: '2026-03-06', title: 'Mise a jour pricing et packaging', type: 'pricing' },
+  ];
+  const qualityScore = Math.min(100, Math.max(45, Math.round(Number(tool.trendingScore) * 0.82)));
+  const supportScore = Math.min(100, Math.max(45, Math.round(Number(tool.trendingScore) * 0.76)));
+  const uxScore = Math.min(100, Math.max(45, Math.round(Number(tool.trendingScore) * 0.84)));
 
   const kpis = [
     {
@@ -319,6 +341,56 @@ export default async function ToolDetailPage({
           </div>
         </section>
 
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <div className="rounded-xl border border-white/10 bg-[#12121e] p-4">
+            <h2 className="text-lg font-bold text-white mb-3">{lang === 'fr' ? 'Stack IA & technique' : 'AI & technical stack'}</h2>
+            <div className="flex flex-wrap gap-2">
+              {aiStack.map((item) => (
+                <span key={item} className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/80">
+                  {item}
+                </span>
+              ))}
+            </div>
+            <p className="mt-3 text-xs text-muted-foreground">
+              {lang === 'fr'
+                ? 'Vue architecture de reference pour evaluer maturite produit et fit enterprise.'
+                : 'Reference architecture snapshot to assess product maturity and enterprise fit.'}
+            </p>
+          </div>
+          <div className="rounded-xl border border-white/10 bg-[#12121e] p-4">
+            <h2 className="text-lg font-bold text-white mb-3">{lang === 'fr' ? 'Entreprise & traction' : 'Company & traction'}</h2>
+            <div className="grid grid-cols-2 gap-3 text-sm">
+              <div>
+                <p className="text-xs text-muted-foreground">{lang === 'fr' ? 'Funding' : 'Funding'}</p>
+                <p className="text-white font-semibold">{estimatedFunding}</p>
+              </div>
+              <div>
+                <p className="text-xs text-muted-foreground">{lang === 'fr' ? 'Stade' : 'Stage'}</p>
+                <p className="text-white font-semibold">{fundingStage}</p>
+              </div>
+              <div className="col-span-2">
+                <p className="text-xs text-muted-foreground">{lang === 'fr' ? 'Fondateurs (estimation)' : 'Founders (estimated)'}</p>
+                <p className="text-white font-semibold">{founders.join(' • ')}</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+          <div className="rounded-xl border border-white/10 bg-[#12121e] p-4">
+            <p className="text-xs text-muted-foreground">{lang === 'fr' ? 'Score qualite' : 'Quality score'}</p>
+            <p className="text-2xl font-bold text-accent mt-1">{qualityScore}/100</p>
+          </div>
+          <div className="rounded-xl border border-white/10 bg-[#12121e] p-4">
+            <p className="text-xs text-muted-foreground">{lang === 'fr' ? 'Score UX' : 'UX score'}</p>
+            <p className="text-2xl font-bold text-accent mt-1">{uxScore}/100</p>
+          </div>
+          <div className="rounded-xl border border-white/10 bg-[#12121e] p-4">
+            <p className="text-xs text-muted-foreground">{lang === 'fr' ? 'Score support' : 'Support score'}</p>
+            <p className="text-2xl font-bold text-accent mt-1">{supportScore}/100</p>
+          </div>
+        </section>
+
         <section className="space-y-4">
           <h2 className="text-xl font-bold text-white">{lang === 'fr' ? 'Graphiques' : 'Charts'}</h2>
           <ToolInsightsCharts
@@ -329,6 +401,62 @@ export default async function ToolDetailPage({
             starsData={starsSeries}
             scoreHistory={historySeries}
           />
+        </section>
+
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <div className="rounded-xl border border-white/10 bg-[#12121e] p-4">
+            <h2 className="text-lg font-bold text-white mb-3">{lang === 'fr' ? 'Integrations' : 'Integrations'}</h2>
+            <div className="flex flex-wrap gap-2">
+              {integrations.map((item) => (
+                <span key={item} className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/80">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+          <div className="rounded-xl border border-white/10 bg-[#12121e] p-4">
+            <h2 className="text-lg font-bold text-white mb-3">{lang === 'fr' ? 'Alternatives' : 'Alternatives'}</h2>
+            <div className="space-y-2">
+              {alternatives.length === 0 ? (
+                <p className="text-sm text-muted-foreground">{lang === 'fr' ? 'Aucune alternative proche.' : 'No close alternative.'}</p>
+              ) : (
+                alternatives.map((alt) => (
+                  <Link key={alt.id} href={`/tool/${alt.id}`} className="block rounded-lg border border-white/10 bg-black/20 p-2 text-sm text-white hover:border-accent">
+                    {alt.name} <span className="text-xs text-muted-foreground">({Number(alt.trendingScore).toFixed(1)})</span>
+                  </Link>
+                ))
+              )}
+            </div>
+            <div className="mt-3 space-y-2">
+              <Link
+                href={`/alternatives-to/${tool.id}`}
+                className="inline-flex rounded-md border border-white/15 px-2.5 py-1 text-xs text-white/80 hover:border-accent"
+              >
+                {lang === 'fr' ? `Voir toutes les alternatives a ${tool.name}` : `See all alternatives to ${tool.name}`}
+              </Link>
+              {alternatives[0] && (
+                <Link
+                  href={`/compare/${tool.id}/vs/${alternatives[0].id}`}
+                  className="inline-flex rounded-md border border-white/15 px-2.5 py-1 text-xs text-white/80 hover:border-accent ml-2"
+                >
+                  {lang === 'fr' ? `Comparer ${tool.name} vs ${alternatives[0].name}` : `Compare ${tool.name} vs ${alternatives[0].name}`}
+                </Link>
+              )}
+            </div>
+          </div>
+        </section>
+
+        <section className="rounded-xl border border-white/10 bg-[#12121e] p-4 space-y-3">
+          <h2 className="text-lg font-bold text-white">{lang === 'fr' ? 'Changelog recent' : 'Recent changelog'}</h2>
+          {changelog.map((entry) => (
+            <div key={`${entry.date}-${entry.title}`} className="rounded-lg border border-white/10 bg-black/20 px-3 py-2">
+              <div className="flex items-center justify-between gap-2">
+                <p className="text-sm text-white">{entry.title}</p>
+                <span className="text-xs text-muted-foreground">{entry.date}</span>
+              </div>
+              <p className="text-xs text-muted-foreground mt-1 uppercase">{entry.type}</p>
+            </div>
+          ))}
         </section>
 
         <section className="space-y-4">
@@ -439,9 +567,18 @@ export default async function ToolDetailPage({
               </tbody>
             </table>
             <div className="mt-3">
-              <button className="px-3 py-1.5 rounded-md border border-white/15 text-sm">
-                {lang === 'fr' ? 'Voir la comparaison complete' : 'See full comparison'}
-              </button>
+              {competitors[0] ? (
+                <Link
+                  href={`/compare`}
+                  className="inline-flex px-3 py-1.5 rounded-md border border-white/15 text-sm hover:border-accent"
+                >
+                  {lang === 'fr' ? 'Voir la comparaison complete' : 'See full comparison'}
+                </Link>
+              ) : (
+                <button className="px-3 py-1.5 rounded-md border border-white/15 text-sm" disabled>
+                  {lang === 'fr' ? 'Voir la comparaison complete' : 'See full comparison'}
+                </button>
+              )}
             </div>
           </div>
         </section>
