@@ -1,0 +1,2518 @@
+{
+  "zapier": {
+    "google_trends": {
+      "score_avg": 56.34,
+      "trend_30d": "down"
+    },
+    "producthunt": {
+      "upvotes": 416,
+      "reviews": 59,
+      "launch_date": "2014-02-10T11:10:40Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 0,
+      "avg_score": 0
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 41462,
+      "likes_total": 1557
+    },
+    "devto": {
+      "articles_count": 10,
+      "reactions_total": 6,
+      "comments_total": 0
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 22.55,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:58:47.794868+00:00"
+  },
+  "make": {
+    "google_trends": {
+      "score_avg": 74.99,
+      "trend_30d": "down"
+    },
+    "producthunt": {
+      "upvotes": 88,
+      "reviews": 0,
+      "launch_date": "2016-03-03T09:39:01Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 20,
+      "avg_score": 77.1
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 4360811,
+      "likes_total": 151357
+    },
+    "devto": {
+      "articles_count": 10,
+      "reactions_total": 2,
+      "comments_total": 0
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 43.1,
+    "status": "stable",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:59:10.831126+00:00"
+  },
+  "posthog": {
+    "google_trends": {
+      "score_avg": 59.87,
+      "trend_30d": "down"
+    },
+    "producthunt": {
+      "upvotes": null,
+      "reviews": null,
+      "launch_date": null,
+      "rank": null
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 20,
+      "avg_score": 35.75
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 6024,
+      "likes_total": 365
+    },
+    "devto": {
+      "articles_count": 9,
+      "reactions_total": 18,
+      "comments_total": 3
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 25.13,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:59:34.418891+00:00"
+  },
+  "notion": {
+    "google_trends": {
+      "score_avg": 74.09,
+      "trend_30d": "down"
+    },
+    "producthunt": {
+      "upvotes": 77,
+      "reviews": 1,
+      "launch_date": "2014-09-16T15:13:02Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": "makenotion/notion-sdk-js",
+      "stars": 5592,
+      "forks": 703,
+      "open_issues": 60,
+      "stars_growth_7d_pct": 0.04,
+      "fetched_at": "2026-04-28T10:34:50.234296+00:00"
+    },
+    "hackernews": {
+      "mentions": 20,
+      "avg_score": 20.3
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 62410,
+      "likes_total": 2392
+    },
+    "devto": {
+      "articles_count": 10,
+      "reactions_total": 3,
+      "comments_total": 0
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 29.43,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:35:10.683342+00:00"
+  },
+  "linear": {
+    "google_trends": {
+      "score_avg": 66.74,
+      "trend_30d": "down"
+    },
+    "producthunt": {
+      "upvotes": null,
+      "reviews": null,
+      "launch_date": null,
+      "rank": null
+    },
+    "github": {
+      "repo": "linear/linear",
+      "stars": 1330,
+      "forks": 247,
+      "open_issues": 20,
+      "stars_growth_7d_pct": 0.15,
+      "fetched_at": "2026-04-28T10:35:20.082125+00:00"
+    },
+    "hackernews": {
+      "mentions": 15,
+      "avg_score": 15.13
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 191713,
+      "likes_total": 4768
+    },
+    "devto": {
+      "articles_count": 10,
+      "reactions_total": 2,
+      "comments_total": 1
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 27.32,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:35:42.827008+00:00"
+  },
+  "figma": {
+    "google_trends": {
+      "score_avg": 29.09,
+      "trend_30d": "down"
+    },
+    "producthunt": {
+      "upvotes": null,
+      "reviews": null,
+      "launch_date": null,
+      "rank": null
+    },
+    "github": {
+      "repo": "figma/plugin-samples",
+      "stars": 1793,
+      "forks": 347,
+      "open_issues": 19,
+      "stars_growth_7d_pct": 0.0,
+      "fetched_at": "2026-04-28T10:35:51.115230+00:00"
+    },
+    "hackernews": {
+      "mentions": 10,
+      "avg_score": 1.9
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 49745,
+      "likes_total": 1488
+    },
+    "devto": {
+      "articles_count": 10,
+      "reactions_total": 2,
+      "comments_total": 1
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 16.19,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:36:12.020188+00:00"
+  },
+  "vercel": {
+    "google_trends": {
+      "score_avg": 56.84,
+      "trend_30d": "down"
+    },
+    "producthunt": {
+      "upvotes": 17,
+      "reviews": 852,
+      "launch_date": "2020-06-06T15:05:01Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": "vercel/vercel",
+      "stars": 15385,
+      "forks": 3540,
+      "open_issues": 651,
+      "stars_growth_7d_pct": 0.05,
+      "fetched_at": "2026-04-28T10:36:21.315326+00:00"
+    },
+    "hackernews": {
+      "mentions": 20,
+      "avg_score": 29.35
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 186808,
+      "likes_total": 11829
+    },
+    "devto": {
+      "articles_count": 10,
+      "reactions_total": 3,
+      "comments_total": 0
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 25.68,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:36:48.713252+00:00"
+  },
+  "supabase": {
+    "google_trends": {
+      "score_avg": 71.35,
+      "trend_30d": "down"
+    },
+    "producthunt": {
+      "upvotes": 445,
+      "reviews": 755,
+      "launch_date": "2020-05-27T10:31:50Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": "supabase/supabase",
+      "stars": 101524,
+      "forks": 12209,
+      "open_issues": 962,
+      "stars_growth_7d_pct": 0.06,
+      "fetched_at": "2026-04-28T10:36:58.261535+00:00"
+    },
+    "hackernews": {
+      "mentions": 8,
+      "avg_score": 3.75
+    },
+    "reddit": {
+      "posts_7d": 1,
+      "upvotes_7d": 1
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 37057,
+      "likes_total": 918
+    },
+    "devto": {
+      "articles_count": 10,
+      "reactions_total": 0,
+      "comments_total": 0
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 27.86,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:37:26.393840+00:00"
+  },
+  "openai": {
+    "google_trends": {
+      "score_avg": 60.01,
+      "trend_30d": "down"
+    },
+    "producthunt": {
+      "upvotes": 7,
+      "reviews": 1,
+      "launch_date": "2015-12-12T21:58:15Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": "openai/openai-python",
+      "stars": 30620,
+      "forks": 4750,
+      "open_issues": 418,
+      "stars_growth_7d_pct": 0.05,
+      "fetched_at": "2026-04-28T10:37:35.753332+00:00"
+    },
+    "hackernews": {
+      "mentions": 20,
+      "avg_score": 92.45
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 990938,
+      "likes_total": 21878
+    },
+    "devto": {
+      "articles_count": 10,
+      "reactions_total": 0,
+      "comments_total": 0
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 31.26,
+    "status": "stable",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:38:00.913889+00:00"
+  },
+  "midjourney": {
+    "google_trends": {
+      "score_avg": 68.52,
+      "trend_30d": "down"
+    },
+    "producthunt": {
+      "upvotes": 434,
+      "reviews": 80,
+      "launch_date": "2022-09-18T07:38:34Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": "midjourney/docs",
+      "stars": 387,
+      "forks": 69,
+      "open_issues": 2,
+      "stars_growth_7d_pct": 0.0,
+      "fetched_at": "2026-04-28T10:38:09.127966+00:00"
+    },
+    "hackernews": {
+      "mentions": 1,
+      "avg_score": 2.0
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 28858,
+      "likes_total": 1434
+    },
+    "devto": {
+      "articles_count": 10,
+      "reactions_total": 0,
+      "comments_total": 0
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 25.72,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:38:45.438946+00:00"
+  },
+  "cursor": {
+    "google_trends": {
+      "score_avg": 73.29,
+      "trend_30d": "down"
+    },
+    "producthunt": {
+      "upvotes": 23,
+      "reviews": 0,
+      "launch_date": "2018-05-30T15:25:03Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": "getcursor/cursor",
+      "stars": 32770,
+      "forks": 2227,
+      "open_issues": 2,
+      "stars_growth_7d_pct": 0.03,
+      "fetched_at": "2026-04-28T10:38:58.564822+00:00"
+    },
+    "hackernews": {
+      "mentions": 20,
+      "avg_score": 55.9
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 3445128,
+      "likes_total": 30667
+    },
+    "devto": {
+      "articles_count": 10,
+      "reactions_total": 11,
+      "comments_total": 3
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 42.51,
+    "status": "stable",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:39:19.178977+00:00"
+  },
+  "perplexity": {
+    "google_trends": {
+      "score_avg": 66.63,
+      "trend_30d": "down"
+    },
+    "producthunt": {
+      "upvotes": null,
+      "reviews": null,
+      "launch_date": null,
+      "rank": null
+    },
+    "github": {
+      "repo": "ppl-ai/model-card",
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 2,
+      "avg_score": 1.5
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 355793,
+      "likes_total": 13445
+    },
+    "devto": {
+      "articles_count": 10,
+      "reactions_total": 0,
+      "comments_total": 0
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 26.08,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:39:46.360569+00:00"
+  },
+  "clerk": {
+    "google_trends": {
+      "score_avg": 38.68,
+      "trend_30d": "down"
+    },
+    "producthunt": {
+      "upvotes": 133,
+      "reviews": 9,
+      "launch_date": "2020-07-14T07:02:00Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 1,
+      "avg_score": 2.0
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 228751,
+      "likes_total": 9059
+    },
+    "devto": {
+      "articles_count": 10,
+      "reactions_total": 11,
+      "comments_total": 7
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 18.59,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:40:10.470784+00:00"
+  },
+  "loom": {
+    "google_trends": {
+      "score_avg": 59.52,
+      "trend_30d": "down"
+    },
+    "producthunt": {
+      "upvotes": 69,
+      "reviews": 157,
+      "launch_date": "2014-02-05T14:19:48Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 20,
+      "avg_score": 39.65
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 484033,
+      "likes_total": 8796
+    },
+    "devto": {
+      "articles_count": 9,
+      "reactions_total": 86,
+      "comments_total": 8
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 28.29,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:40:33.876587+00:00"
+  },
+  "airtable": {
+    "google_trends": {
+      "score_avg": 24.65,
+      "trend_30d": "down"
+    },
+    "producthunt": {
+      "upvotes": 540,
+      "reviews": 49,
+      "launch_date": "2014-09-26T18:16:34Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 4,
+      "avg_score": 40.25
+    },
+    "reddit": {
+      "posts_7d": 1,
+      "upvotes_7d": 1
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 3892,
+      "likes_total": 88
+    },
+    "devto": {
+      "articles_count": 10,
+      "reactions_total": 55,
+      "comments_total": 15
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 15.73,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:40:57.887570+00:00"
+  },
+  "webflow": {
+    "google_trends": {
+      "score_avg": 63.55,
+      "trend_30d": "down"
+    },
+    "producthunt": {
+      "upvotes": 376,
+      "reviews": 139,
+      "launch_date": "2013-12-19T00:44:57Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 5,
+      "avg_score": 2.0
+    },
+    "reddit": {
+      "posts_7d": 2,
+      "upvotes_7d": 7
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 40520,
+      "likes_total": 1232
+    },
+    "devto": {
+      "articles_count": 10,
+      "reactions_total": 0,
+      "comments_total": 0
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 25.38,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:41:19.312083+00:00"
+  },
+  "framer": {
+    "google_trends": {
+      "score_avg": 74.41,
+      "trend_30d": "down"
+    },
+    "producthunt": {
+      "upvotes": 118,
+      "reviews": 0,
+      "launch_date": "2014-03-29T22:56:04Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 20,
+      "avg_score": 99.85
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 786629,
+      "likes_total": 9460
+    },
+    "devto": {
+      "articles_count": 10,
+      "reactions_total": 136,
+      "comments_total": 10
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 34.3,
+    "status": "stable",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:41:40.543173+00:00"
+  },
+  "superhuman": {
+    "google_trends": {
+      "score_avg": 66.02,
+      "trend_30d": "down"
+    },
+    "producthunt": {
+      "upvotes": null,
+      "reviews": null,
+      "launch_date": null,
+      "rank": null
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 1,
+      "avg_score": 2.0
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 2245228,
+      "likes_total": 85724
+    },
+    "devto": {
+      "articles_count": 0,
+      "reactions_total": 0,
+      "comments_total": 0
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 35.09,
+    "status": "stable",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:42:01.607356+00:00"
+  },
+  "arc-browser": {
+    "google_trends": {
+      "score_avg": 66.77,
+      "trend_30d": "down"
+    },
+    "producthunt": {
+      "upvotes": 126,
+      "reviews": 0,
+      "launch_date": "2017-03-23T14:33:19Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 20,
+      "avg_score": 49.35
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 453849,
+      "likes_total": 25947
+    },
+    "devto": {
+      "articles_count": 5,
+      "reactions_total": 17,
+      "comments_total": 6
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 29.12,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:42:22.189524+00:00"
+  },
+  "raycast": {
+    "google_trends": {
+      "score_avg": 70.81,
+      "trend_30d": "up"
+    },
+    "producthunt": {
+      "upvotes": null,
+      "reviews": null,
+      "launch_date": null,
+      "rank": null
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 4,
+      "avg_score": 3.5
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 297837,
+      "likes_total": 18842
+    },
+    "devto": {
+      "articles_count": 10,
+      "reactions_total": 28,
+      "comments_total": 11
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 27.18,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:42:44.352526+00:00"
+  },
+  "cron-calendar": {
+    "google_trends": {
+      "score_avg": 28.76,
+      "trend_30d": "down"
+    },
+    "producthunt": {
+      "upvotes": 1170,
+      "reviews": 96,
+      "launch_date": "2021-11-19T08:01:00Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 20,
+      "avg_score": 209.7
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 1059484,
+      "likes_total": 24043
+    },
+    "devto": {
+      "articles_count": 10,
+      "reactions_total": 0,
+      "comments_total": 1
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 27.34,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:43:05.455825+00:00"
+  },
+  "cal-com": {
+    "google_trends": {
+      "score_avg": 60.08,
+      "trend_30d": "down"
+    },
+    "producthunt": {
+      "upvotes": null,
+      "reviews": null,
+      "launch_date": null,
+      "rank": null
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 1,
+      "avg_score": 258.0
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 116266,
+      "likes_total": 6678
+    },
+    "devto": {
+      "articles_count": 1,
+      "reactions_total": 1,
+      "comments_total": 0
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 21.04,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:43:26.604258+00:00"
+  },
+  "resend": {
+    "google_trends": {
+      "score_avg": 73.07,
+      "trend_30d": "down"
+    },
+    "producthunt": {
+      "upvotes": 7,
+      "reviews": 0,
+      "launch_date": "2016-07-01T03:53:11Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 3,
+      "avg_score": 7.0
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 8949,
+      "likes_total": 333
+    },
+    "devto": {
+      "articles_count": 10,
+      "reactions_total": 11,
+      "comments_total": 0
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 25.82,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:43:47.036756+00:00"
+  },
+  "anthropic": {
+    "google_trends": {
+      "score_avg": 38.05,
+      "trend_30d": "down"
+    },
+    "producthunt": {
+      "upvotes": null,
+      "reviews": null,
+      "launch_date": null,
+      "rank": null
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 20,
+      "avg_score": 126.2
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 1639306,
+      "likes_total": 45125
+    },
+    "devto": {
+      "articles_count": 10,
+      "reactions_total": 0,
+      "comments_total": 0
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 29.63,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:44:07.778133+00:00"
+  },
+  "grammarly": {
+    "google_trends": {
+      "score_avg": 75.4,
+      "trend_30d": "up"
+    },
+    "producthunt": {
+      "upvotes": 366,
+      "reviews": 56,
+      "launch_date": "2014-05-28T13:48:35Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 1,
+      "avg_score": 1.0
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 9052489,
+      "likes_total": 1438
+    },
+    "devto": {
+      "articles_count": 4,
+      "reactions_total": 19,
+      "comments_total": 0
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 39.71,
+    "status": "stable",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:44:41.164806+00:00"
+  },
+  "jasper": {
+    "google_trends": {
+      "score_avg": 71.96,
+      "trend_30d": "down"
+    },
+    "producthunt": {
+      "upvotes": 7,
+      "reviews": 0,
+      "launch_date": "2015-04-27T10:55:01Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 1,
+      "avg_score": 1.0
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 248185,
+      "likes_total": 7889
+    },
+    "devto": {
+      "articles_count": 2,
+      "reactions_total": 0,
+      "comments_total": 0
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 25.02,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:45:07.052834+00:00"
+  },
+  "copy-ai": {
+    "google_trends": {
+      "score_avg": 43.23,
+      "trend_30d": "down"
+    },
+    "producthunt": {
+      "upvotes": null,
+      "reviews": null,
+      "launch_date": null,
+      "rank": null
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 0,
+      "avg_score": 0
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 134337,
+      "likes_total": 5748
+    },
+    "devto": {
+      "articles_count": 8,
+      "reactions_total": 0,
+      "comments_total": 0
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 18.16,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:45:29.154974+00:00"
+  },
+  "canva": {
+    "google_trends": {
+      "score_avg": 78.53,
+      "trend_30d": "up"
+    },
+    "producthunt": {
+      "upvotes": 398,
+      "reviews": 489,
+      "launch_date": "2013-12-06T20:20:23Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 20,
+      "avg_score": 41.15
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 94649,
+      "likes_total": 5601
+    },
+    "devto": {
+      "articles_count": 10,
+      "reactions_total": 1,
+      "comments_total": 0
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 31.68,
+    "status": "stable",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:45:51.355834+00:00"
+  },
+  "adobe-firefly": {
+    "google_trends": {
+      "score_avg": 71.23,
+      "trend_30d": "down"
+    },
+    "producthunt": {
+      "upvotes": 168,
+      "reviews": 6,
+      "launch_date": "2023-03-21T14:25:17Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 0,
+      "avg_score": 0
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 1165148,
+      "likes_total": 2227
+    },
+    "devto": {
+      "articles_count": 5,
+      "reactions_total": 0,
+      "comments_total": 0
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 31.25,
+    "status": "stable",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:46:12.730091+00:00"
+  },
+  "dall-e": {
+    "google_trends": {
+      "score_avg": 70.68,
+      "trend_30d": "down"
+    },
+    "producthunt": {
+      "upvotes": 601,
+      "reviews": 9,
+      "launch_date": "2021-01-06T09:34:48Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 0,
+      "avg_score": 0
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 71906,
+      "likes_total": 4023
+    },
+    "devto": {
+      "articles_count": 0,
+      "reactions_total": 0,
+      "comments_total": 0
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 24.85,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:46:34.722572+00:00"
+  },
+  "stable-diffusion": {
+    "google_trends": {
+      "score_avg": 62.84,
+      "trend_30d": "down"
+    },
+    "producthunt": {
+      "upvotes": 110,
+      "reviews": 15,
+      "launch_date": "2023-04-05T07:16:50Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 0,
+      "avg_score": 0
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 17573,
+      "likes_total": 371
+    },
+    "devto": {
+      "articles_count": 10,
+      "reactions_total": 2,
+      "comments_total": 0
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 23.1,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:46:56.914859+00:00"
+  },
+  "runway": {
+    "google_trends": {
+      "score_avg": 0,
+      "trend_30d": "unknown"
+    },
+    "producthunt": {
+      "upvotes": 103,
+      "reviews": 0,
+      "launch_date": "2014-11-19T23:14:55Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 4,
+      "avg_score": 65.0
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 2393901,
+      "likes_total": 271227
+    },
+    "devto": {
+      "articles_count": 6,
+      "reactions_total": 17,
+      "comments_total": 1
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 20.97,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:47:22.458463+00:00"
+  },
+  "hubspot": {
+    "google_trends": {
+      "score_avg": 0,
+      "trend_30d": "cooldown"
+    },
+    "producthunt": {
+      "upvotes": 8,
+      "reviews": 71,
+      "launch_date": "2015-11-23T13:12:00Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 4,
+      "avg_score": 6.5
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 10195,
+      "likes_total": 277
+    },
+    "devto": {
+      "articles_count": 10,
+      "reactions_total": 0,
+      "comments_total": 0
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 7.7,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:48:01.237709+00:00"
+  },
+  "mailchimp": {
+    "google_trends": {
+      "score_avg": 0,
+      "trend_30d": "cooldown"
+    },
+    "producthunt": {
+      "upvotes": 31,
+      "reviews": 20,
+      "launch_date": "2013-12-18T17:58:50Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 3,
+      "avg_score": 1.67
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 212,
+      "likes_total": 5
+    },
+    "devto": {
+      "articles_count": 10,
+      "reactions_total": 184,
+      "comments_total": 39
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 8.0,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:48:39.738607+00:00"
+  },
+  "semrush": {
+    "google_trends": {
+      "score_avg": 0,
+      "trend_30d": "cooldown"
+    },
+    "producthunt": {
+      "upvotes": 42,
+      "reviews": 39,
+      "launch_date": "2014-11-25T23:19:58Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 1,
+      "avg_score": 1.0
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 20014,
+      "likes_total": 265
+    },
+    "devto": {
+      "articles_count": 2,
+      "reactions_total": 0,
+      "comments_total": 0
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 5.76,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:49:05.603555+00:00"
+  },
+  "ahrefs": {
+    "google_trends": {
+      "score_avg": 0,
+      "trend_30d": "cooldown"
+    },
+    "producthunt": {
+      "upvotes": 135,
+      "reviews": 39,
+      "launch_date": "2014-06-23T23:14:40Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 0,
+      "avg_score": 0
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 9291,
+      "likes_total": 340
+    },
+    "devto": {
+      "articles_count": 3,
+      "reactions_total": 4,
+      "comments_total": 0
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 6.02,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:49:30.990324+00:00"
+  },
+  "mixpanel": {
+    "google_trends": {
+      "score_avg": 0,
+      "trend_30d": "cooldown"
+    },
+    "producthunt": {
+      "upvotes": 28,
+      "reviews": 86,
+      "launch_date": "2014-08-07T13:34:09Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 0,
+      "avg_score": 0
+    },
+    "reddit": {
+      "posts_7d": 2,
+      "upvotes_7d": 4
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 481,
+      "likes_total": 10
+    },
+    "devto": {
+      "articles_count": 10,
+      "reactions_total": 105,
+      "comments_total": 19
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 7.63,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:49:54.084224+00:00"
+  },
+  "amplitude": {
+    "google_trends": {
+      "score_avg": 0,
+      "trend_30d": "cooldown"
+    },
+    "producthunt": {
+      "upvotes": 13,
+      "reviews": 46,
+      "launch_date": "2015-08-06T01:38:22Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 0,
+      "avg_score": 0
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 92843,
+      "likes_total": 2533
+    },
+    "devto": {
+      "articles_count": 10,
+      "reactions_total": 24,
+      "comments_total": 1
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 7.61,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:50:40.489609+00:00"
+  },
+  "google-analytics": {
+    "google_trends": {
+      "score_avg": 0,
+      "trend_30d": "cooldown"
+    },
+    "producthunt": {
+      "upvotes": 15,
+      "reviews": 72,
+      "launch_date": "2014-11-25T23:08:47Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 2,
+      "avg_score": 1.5
+    },
+    "reddit": {
+      "posts_7d": 1,
+      "upvotes_7d": 3
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 9896,
+      "likes_total": 551
+    },
+    "devto": {
+      "articles_count": 10,
+      "reactions_total": 9,
+      "comments_total": 2
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 7.58,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:51:08.881730+00:00"
+  },
+  "hotjar": {
+    "google_trends": {
+      "score_avg": 52.12,
+      "trend_30d": "down"
+    },
+    "producthunt": {
+      "upvotes": 1241,
+      "reviews": 21,
+      "launch_date": "2015-07-28T12:12:28Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 5,
+      "avg_score": 6.2
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 551,
+      "likes_total": 7
+    },
+    "devto": {
+      "articles_count": 1,
+      "reactions_total": 11,
+      "comments_total": 0
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 22.77,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:51:34.121589+00:00"
+  },
+  "intercom": {
+    "google_trends": {
+      "score_avg": 0,
+      "trend_30d": "unknown"
+    },
+    "producthunt": {
+      "upvotes": 84,
+      "reviews": 88,
+      "launch_date": "2014-08-07T03:07:00Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 9,
+      "avg_score": 29.11
+    },
+    "reddit": {
+      "posts_7d": 1,
+      "upvotes_7d": 1
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 10837051,
+      "likes_total": 88362
+    },
+    "devto": {
+      "articles_count": 4,
+      "reactions_total": 8,
+      "comments_total": 0
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 21.49,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:51:58.437233+00:00"
+  },
+  "zendesk": {
+    "google_trends": {
+      "score_avg": 0,
+      "trend_30d": "cooldown"
+    },
+    "producthunt": {
+      "upvotes": 96,
+      "reviews": 24,
+      "launch_date": "2014-05-24T07:00:03Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 0,
+      "avg_score": 0
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 746,
+      "likes_total": 11
+    },
+    "devto": {
+      "articles_count": 10,
+      "reactions_total": 39,
+      "comments_total": 0
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 7.34,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:52:20.305094+00:00"
+  },
+  "freshdesk": {
+    "google_trends": {
+      "score_avg": 0,
+      "trend_30d": "cooldown"
+    },
+    "producthunt": {
+      "upvotes": 107,
+      "reviews": 1,
+      "launch_date": "2014-05-06T12:47:31Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 0,
+      "avg_score": 0
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 1447,
+      "likes_total": 7
+    },
+    "devto": {
+      "articles_count": 2,
+      "reactions_total": 0,
+      "comments_total": 0
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 5.68,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:52:42.066277+00:00"
+  },
+  "gorgias": {
+    "google_trends": {
+      "score_avg": 0,
+      "trend_30d": "cooldown"
+    },
+    "producthunt": {
+      "upvotes": 206,
+      "reviews": 1,
+      "launch_date": "2015-03-11T14:17:04Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 1,
+      "avg_score": 2.0
+    },
+    "reddit": {
+      "posts_7d": 2,
+      "upvotes_7d": 2
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 483,
+      "likes_total": 14
+    },
+    "devto": {
+      "articles_count": 0,
+      "reactions_total": 0,
+      "comments_total": 0
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 6.07,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:53:04.424973+00:00"
+  },
+  "stripe": {
+    "google_trends": {
+      "score_avg": 0,
+      "trend_30d": "cooldown"
+    },
+    "producthunt": {
+      "upvotes": 9,
+      "reviews": 404,
+      "launch_date": "2013-12-18T17:57:11Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 20,
+      "avg_score": 13.9
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 252924,
+      "likes_total": 5226
+    },
+    "devto": {
+      "articles_count": 10,
+      "reactions_total": 11,
+      "comments_total": 0
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 11.86,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:53:26.797045+00:00"
+  },
+  "xero": {
+    "google_trends": {
+      "score_avg": 0,
+      "trend_30d": "cooldown"
+    },
+    "producthunt": {
+      "upvotes": 96,
+      "reviews": 4,
+      "launch_date": "2014-03-31T21:24:25Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 20,
+      "avg_score": 20.1
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 52053,
+      "likes_total": 3247
+    },
+    "devto": {
+      "articles_count": 4,
+      "reactions_total": 2,
+      "comments_total": 0
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 9.69,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:53:52.074163+00:00"
+  },
+  "quickbooks": {
+    "google_trends": {
+      "score_avg": 0,
+      "trend_30d": "cooldown"
+    },
+    "producthunt": {
+      "upvotes": 4,
+      "reviews": 0,
+      "launch_date": "2015-12-12T06:54:11Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 1,
+      "avg_score": 3.0
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 17356,
+      "likes_total": 779
+    },
+    "devto": {
+      "articles_count": 10,
+      "reactions_total": 1,
+      "comments_total": 1
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 7.24,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:54:16.008970+00:00"
+  },
+  "brex": {
+    "google_trends": {
+      "score_avg": 0,
+      "trend_30d": "cooldown"
+    },
+    "producthunt": {
+      "upvotes": 260,
+      "reviews": 35,
+      "launch_date": "2018-06-20T07:01:00Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 20,
+      "avg_score": 67.25
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 302707,
+      "likes_total": 4630
+    },
+    "devto": {
+      "articles_count": 0,
+      "reactions_total": 0,
+      "comments_total": 0
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 10.88,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:54:39.501953+00:00"
+  },
+  "ramp": {
+    "google_trends": {
+      "score_avg": 0,
+      "trend_30d": "unknown"
+    },
+    "producthunt": {
+      "upvotes": 295,
+      "reviews": 11,
+      "launch_date": "2020-02-12T15:00:00Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 20,
+      "avg_score": 31.15
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 3606842,
+      "likes_total": 3393
+    },
+    "devto": {
+      "articles_count": 0,
+      "reactions_total": 0,
+      "comments_total": 0
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 22.97,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:55:01.848385+00:00"
+  },
+  "gusto": {
+    "google_trends": {
+      "score_avg": 0,
+      "trend_30d": "cooldown"
+    },
+    "producthunt": {
+      "upvotes": 60,
+      "reviews": 0,
+      "launch_date": "2014-04-02T15:25:48Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 20,
+      "avg_score": 11.75
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 324601,
+      "likes_total": 12091
+    },
+    "devto": {
+      "articles_count": 0,
+      "reactions_total": 0,
+      "comments_total": 0
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 10.41,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:55:36.488985+00:00"
+  },
+  "rippling": {
+    "google_trends": {
+      "score_avg": 0,
+      "trend_30d": "cooldown"
+    },
+    "producthunt": {
+      "upvotes": 558,
+      "reviews": 5,
+      "launch_date": "2017-03-15T07:01:00Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 3,
+      "avg_score": 3.0
+    },
+    "reddit": {
+      "posts_7d": 1,
+      "upvotes_7d": 1
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 271616,
+      "likes_total": 8052
+    },
+    "devto": {
+      "articles_count": 0,
+      "reactions_total": 0,
+      "comments_total": 0
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 8.92,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:56:13.911268+00:00"
+  },
+  "deel": {
+    "google_trends": {
+      "score_avg": 0,
+      "trend_30d": "cooldown"
+    },
+    "producthunt": {
+      "upvotes": 558,
+      "reviews": 254,
+      "launch_date": "2019-03-10T08:00:04Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 20,
+      "avg_score": 396.6
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 66046,
+      "likes_total": 569
+    },
+    "devto": {
+      "articles_count": 0,
+      "reactions_total": 0,
+      "comments_total": 0
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 10.35,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:56:36.019501+00:00"
+  },
+  "greenhouse": {
+    "google_trends": {
+      "score_avg": 0,
+      "trend_30d": "cooldown"
+    },
+    "producthunt": {
+      "upvotes": 102,
+      "reviews": 0,
+      "launch_date": "2014-06-17T14:51:21Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 3,
+      "avg_score": 4.0
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 4493133,
+      "likes_total": 70583
+    },
+    "devto": {
+      "articles_count": 0,
+      "reactions_total": 0,
+      "comments_total": 0
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 19.56,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:56:58.838739+00:00"
+  },
+  "lever": {
+    "google_trends": {
+      "score_avg": 0,
+      "trend_30d": "cooldown"
+    },
+    "producthunt": {
+      "upvotes": 121,
+      "reviews": 0,
+      "launch_date": "2014-01-17T09:59:58Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 20,
+      "avg_score": 63.55
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 436981,
+      "likes_total": 15067
+    },
+    "devto": {
+      "articles_count": 0,
+      "reactions_total": 0,
+      "comments_total": 0
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 11.27,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:57:20.561791+00:00"
+  },
+  "monday": {
+    "google_trends": {
+      "score_avg": 0,
+      "trend_30d": "cooldown"
+    },
+    "producthunt": {
+      "upvotes": null,
+      "reviews": null,
+      "launch_date": null,
+      "rank": null
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 0,
+      "avg_score": 0
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 35740,
+      "likes_total": 2420
+    },
+    "devto": {
+      "articles_count": 1,
+      "reactions_total": 0,
+      "comments_total": 0
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 5.36,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:57:42.046458+00:00"
+  },
+  "asana": {
+    "google_trends": {
+      "score_avg": 0,
+      "trend_30d": "cooldown"
+    },
+    "producthunt": {
+      "upvotes": null,
+      "reviews": null,
+      "launch_date": null,
+      "rank": null
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 2,
+      "avg_score": 6.0
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 23720,
+      "likes_total": 616
+    },
+    "devto": {
+      "articles_count": 10,
+      "reactions_total": 50,
+      "comments_total": 4
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 7.55,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:58:03.217939+00:00"
+  },
+  "clickup": {
+    "google_trends": {
+      "score_avg": 0,
+      "trend_30d": "cooldown"
+    },
+    "producthunt": {
+      "upvotes": 11,
+      "reviews": 118,
+      "launch_date": "2017-06-22T03:50:33Z",
+      "rank": 1
+    },
+    "github": {
+      "repo": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null,
+      "stars_growth_7d_pct": null
+    },
+    "hackernews": {
+      "mentions": 20,
+      "avg_score": 10.9
+    },
+    "reddit": {
+      "posts_7d": 0,
+      "upvotes_7d": 0
+    },
+    "youtube": {
+      "videos_count": 10,
+      "views_total": 7257,
+      "likes_total": 120
+    },
+    "devto": {
+      "articles_count": 6,
+      "reactions_total": 3,
+      "comments_total": 1
+    },
+    "npm": {
+      "downloads_weekly": null
+    },
+    "trend_score": 9.57,
+    "status": "declining",
+    "data_quality": "high",
+    "updated_at": "2026-04-28T10:58:24.903834+00:00"
+  }
+}

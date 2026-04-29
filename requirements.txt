@@ -1,0 +1,6 @@
+pytrends
+requests
+supabase
+python-dotenv
+playwright
+beautifulsoup4
