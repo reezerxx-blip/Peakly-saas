@@ -1,5 +1,5 @@
-import LandingPage from './index/page';
+import { redirect } from 'next/navigation';
 
 export default function HomePage() {
-  return <LandingPage />;
+  redirect('/trends');
 }
