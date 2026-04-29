@@ -15,9 +15,9 @@ export default function PricingPage() {
         <h1 className="premium-hero-title text-[44px] font-extrabold leading-[1.05] bg-gradient-to-b from-white to-white/50 bg-clip-text text-transparent">
           Pricing
         </h1>
-        <p className="mt-2 text-white/60">Choisissez le plan adapte a votre rythme.</p>
+        <p className="mt-2 text-white/60">Choisissez le plan adapte a votre niveau d&apos;intelligence marche IA.</p>
 
-        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
           <div className="rounded-2xl border border-white/10 bg-[#0d0d1a] p-6">
             <h2 className="text-2xl font-bold">Free</h2>
             <p className="mt-2 text-white/60">Ideal pour decouvrir le produit.</p>
@@ -26,6 +26,7 @@ export default function PricingPage() {
               <li>- Tendances et categories</li>
               <li>- Acces aux pages outils</li>
               <li>- Vue Bulles</li>
+              <li>- Recherche basique</li>
             </ul>
           </div>
           <div className="rounded-2xl border border-[#ffaa00]/60 bg-[#0d0d1a] p-6 shadow-[0_0_28px_rgba(255,170,0,0.18)]">
@@ -35,6 +36,8 @@ export default function PricingPage() {
             <ul className="mt-4 space-y-2 text-sm text-white/70">
               <li>- Alertes personnalisees</li>
               <li>- Filtres avances</li>
+              <li>- AI Radar (watchlist + timeline)</li>
+              <li>- Recherche semantique + autocomplete</li>
               <li>- Priorite support</li>
             </ul>
             <Link
@@ -43,6 +46,35 @@ export default function PricingPage() {
             >
               Passer Pro
             </Link>
+          </div>
+          <div className="rounded-2xl border border-cyan-400/40 bg-[#0d0d1a] p-6">
+            <h2 className="text-2xl font-bold">Enterprise</h2>
+            <p className="mt-2 text-white/60">Pour les equipes produit/growth qui veulent un avantage data.</p>
+            <p className="mt-4 text-3xl font-extrabold">Custom</p>
+            <ul className="mt-4 space-y-2 text-sm text-white/70">
+              <li>- Tout le plan Pro</li>
+              <li>- API access et exports illimites</li>
+              <li>- Workflows IA partages</li>
+              <li>- SLA et support dedie</li>
+            </ul>
+            <Link
+              href="/contact"
+              className="mt-6 inline-flex rounded-lg border border-cyan-300/40 px-4 py-2 font-semibold text-cyan-200"
+            >
+              Contacter les ventes
+            </Link>
+          </div>
+        </div>
+
+        <div className="mt-8 rounded-2xl border border-white/10 bg-[#0d0d1a] p-6">
+          <h3 className="text-lg font-bold">Gating des fonctionnalités premium</h3>
+          <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-white/75">
+            <p>- Comparaisons avancees: Pro+</p>
+            <p>- Exports: Enterprise</p>
+            <p>- AI Advisor personalise: Pro+</p>
+            <p>- Alertes intelligentes: Pro+</p>
+            <p>- API Access: Enterprise</p>
+            <p>- Radar complet: Pro+</p>
           </div>
         </div>
       </div>

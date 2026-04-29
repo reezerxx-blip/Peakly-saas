@@ -20,6 +20,9 @@ export type AppTool = Tool & {
   youtubeQuery?: string;
   redditQuery?: string;
   phSlug?: string;
+  country?: string;
+  companySize?: 'startup' | 'scaleup' | 'enterprise';
+  fundingStage?: 'seed' | 'series-a' | 'series-b+' | 'bootstrapped';
 };
 
 type SupabaseToolRow = {
@@ -94,6 +97,9 @@ function fromToolsData(tool: ToolData): AppTool {
     youtubeQuery: tool.youtube_query,
     redditQuery: tool.reddit_query,
     phSlug: tool.ph_slug,
+    country: 'Global',
+    companySize: tool.monthlyVisits > 20_000_000 ? 'enterprise' : tool.monthlyVisits > 5_000_000 ? 'scaleup' : 'startup',
+    fundingStage: tool.pricing === 'free' ? 'bootstrapped' : tool.trendScore > 90 ? 'series-b+' : tool.trendScore > 80 ? 'series-a' : 'seed',
     dataQuality: 'low',
     lastUpdatedAt: null,
   };
@@ -122,6 +128,9 @@ function fromSupabaseRow(row: SupabaseToolRow): AppTool {
     weeklyGrowth: row.weekly_growth ?? undefined,
     pricing: row.pricing ?? undefined,
     launched: row.launched ?? undefined,
+    country: 'Global',
+    companySize: (row.monthly_visits ?? 0) > 20_000_000 ? 'enterprise' : (row.monthly_visits ?? 0) > 5_000_000 ? 'scaleup' : 'startup',
+    fundingStage: row.pricing === 'free' ? 'bootstrapped' : trend > 90 ? 'series-b+' : trend > 80 ? 'series-a' : 'seed',
     dataQuality: row.data_quality ?? 'unknown',
     lastUpdatedAt: null,
   };

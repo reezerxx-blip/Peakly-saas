@@ -6,6 +6,12 @@ function readRequiredEnv(name: string): string {
   return value;
 }
 
+function readOptionalEnv(name: string): string | undefined {
+  const value = process.env[name];
+  if (!value) return undefined;
+  return value;
+}
+
 export const env = {
   get supabaseUrl() {
     return readRequiredEnv('NEXT_PUBLIC_SUPABASE_URL');
@@ -33,5 +39,8 @@ export const env = {
   },
   get resendApiKey() {
     return readRequiredEnv('RESEND_API_KEY');
+  },
+  get ownerUserId() {
+    return readOptionalEnv('OWNER_USER_ID');
   },
 } as const;

@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { createSupabaseServerClient, createSupabaseAdminClient } from '@/lib/supabase/server';
 import { getTools } from '@/lib/get-tools';
+import { env } from '@/lib/env';
 
 export async function GET() {
   const supabase = await createSupabaseServerClient();
@@ -20,10 +21,20 @@ export async function GET() {
     .order('created_at', { ascending: false });
 
   if (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    const setupHint =
+      error.message.includes('relation') && error.message.includes('alerts')
+        ? 'Supabase setup missing: run SQL migrations (see INTEGRATIONS.md).'
+        : undefined;
+    return NextResponse.json({ error: error.message, setupHint }, { status: 500 });
   }
 
-  return NextResponse.json({ alerts: data ?? [] });
+  return NextResponse.json({
+    alerts: data ?? [],
+    meta: {
+      total: data?.length ?? 0,
+      active: (data ?? []).filter((item) => item.active).length,
+    },
+  });
 }
 
 export async function POST(request: Request) {
@@ -47,8 +58,17 @@ export async function POST(request: Request) {
 
   const admin = createSupabaseAdminClient();
   const { data: profile } = await admin.from('users').select('plan').eq('id', user.id).maybeSingle();
-  if (profile?.plan !== 'pro') {
+  const isOwner = Boolean(env.ownerUserId && user.id === env.ownerUserId);
+  if (!isOwner && profile?.plan !== 'pro') {
     return NextResponse.json({ error: 'Pro plan required' }, { status: 403 });
+  }
+  const { data: existingAlerts } = await admin
+    .from('alerts')
+    .select('id')
+    .eq('user_id', user.id)
+    .eq('active', true);
+  if ((existingAlerts?.length ?? 0) >= 50) {
+    return NextResponse.json({ error: 'Maximum active alerts reached (50)' }, { status: 400 });
   }
 
   const thresholdPercent = Math.max(1, Number(body.thresholdPercent ?? 15));

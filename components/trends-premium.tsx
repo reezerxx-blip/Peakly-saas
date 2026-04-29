@@ -9,6 +9,7 @@ import { TrendBadge } from '@/components/ui/trend-badge';
 import { ScoreBar } from '@/components/ui/score-bar';
 import { LiveIndicator } from '@/components/ui/live-indicator';
 import { SparkLine } from '@/components/ui/spark-line';
+import { discoveryAutocomplete, inferToolTraits, matchesDiscoveryQuery } from '@/lib/tool-discovery';
 
 type TrendFilter = 'all' | 'hot' | 'rising' | 'stable' | 'declining';
 type TimeFilter = 'week' | 'month' | 'quarter';
@@ -82,15 +83,39 @@ export function TrendsPremium({
   const [trendFilter, setTrendFilter] = useState<TrendFilter>('all');
   const [timeFilter, setTimeFilter] = useState<TimeFilter>('week');
   const [categoryFilter, setCategoryFilter] = useState<string>('all');
+  const [query, setQuery] = useState('');
+  const [pricingFilter, setPricingFilter] = useState<'all' | 'free' | 'freemium' | 'paid'>('all');
+  const [apiFilter, setApiFilter] = useState<'all' | 'api' | 'no-api'>('all');
+  const [buildFilter, setBuildFilter] = useState<'all' | 'open-source' | 'no-code' | 'self-hosted'>('all');
+  const [popularityFilter, setPopularityFilter] = useState<'all' | 'mega' | 'high' | 'medium' | 'low'>('all');
 
   const categories = useMemo(() => Array.from(new Set(tools.map((t) => t.category))).sort(), [tools]);
+  const suggestions = useMemo(() => discoveryAutocomplete(tools, query), [tools, query]);
   const filtered = useMemo(
     () =>
       tools
         .filter((t) => (trendFilter === 'all' ? true : statusOf(t) === trendFilter))
         .filter((t) => (categoryFilter === 'all' ? true : t.category === categoryFilter))
+        .filter((t) => matchesDiscoveryQuery(t, query))
+        .filter((t) => (pricingFilter === 'all' ? true : (t.pricing ?? '').toLowerCase() === pricingFilter))
+        .filter((t) => {
+          const traits = inferToolTraits(t);
+          if (apiFilter === 'all') return true;
+          return apiFilter === 'api' ? traits.hasApi : !traits.hasApi;
+        })
+        .filter((t) => {
+          const traits = inferToolTraits(t);
+          if (buildFilter === 'all') return true;
+          if (buildFilter === 'open-source') return traits.openSource;
+          if (buildFilter === 'no-code') return traits.noCode;
+          return traits.selfHosted;
+        })
+        .filter((t) => {
+          const traits = inferToolTraits(t);
+          return popularityFilter === 'all' ? true : traits.popularity === popularityFilter;
+        })
         .sort((a, b) => b.trendingScore - a.trendingScore),
-    [tools, trendFilter, categoryFilter]
+    [tools, trendFilter, categoryFilter, query, pricingFilter, apiFilter, buildFilter, popularityFilter]
   );
 
   const grouped = useMemo(
@@ -197,6 +222,71 @@ export function TrendsPremium({
             {f === 'all' ? 'Tous' : f === 'hot' ? 'Hot 🔥' : f === 'rising' ? 'Rising 📈' : f === 'stable' ? 'Stable' : 'Declining'}
           </button>
         ))}
+      </div>
+      <div className="rounded-xl border border-white/10 bg-[#0d0d1a] p-3 space-y-3">
+        <div className="relative">
+          <input
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder={lang === 'fr' ? 'Recherche intelligente (outil, use case, tags...)' : 'Smart search (tool, use case, tags...)'}
+            className="w-full rounded-lg border border-white/15 bg-transparent px-3 py-2 text-sm text-white/90 placeholder:text-white/40"
+          />
+          {query.trim().length > 0 && suggestions.length > 0 && (
+            <div className="absolute z-20 mt-1 w-full rounded-lg border border-white/10 bg-[#0b0f1d] p-1">
+              {suggestions.map((suggestion) => (
+                <button
+                  key={suggestion}
+                  onClick={() => setQuery(suggestion)}
+                  className="w-full rounded-md px-2 py-1 text-left text-xs text-white/80 hover:bg-white/10"
+                >
+                  {suggestion}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-2">
+          <select
+            value={pricingFilter}
+            onChange={(e) => setPricingFilter(e.target.value as 'all' | 'free' | 'freemium' | 'paid')}
+            className="rounded-lg border border-white/15 bg-transparent px-3 py-2 text-xs text-white/80"
+          >
+            <option value="all">{lang === 'fr' ? 'Pricing: tous' : 'Pricing: all'}</option>
+            <option value="free">Free</option>
+            <option value="freemium">Freemium</option>
+            <option value="paid">Paid</option>
+          </select>
+          <select
+            value={apiFilter}
+            onChange={(e) => setApiFilter(e.target.value as 'all' | 'api' | 'no-api')}
+            className="rounded-lg border border-white/15 bg-transparent px-3 py-2 text-xs text-white/80"
+          >
+            <option value="all">{lang === 'fr' ? 'API: tous' : 'API: all'}</option>
+            <option value="api">{lang === 'fr' ? 'API disponible' : 'Has API'}</option>
+            <option value="no-api">{lang === 'fr' ? 'Sans API' : 'No API'}</option>
+          </select>
+          <select
+            value={buildFilter}
+            onChange={(e) => setBuildFilter(e.target.value as 'all' | 'open-source' | 'no-code' | 'self-hosted')}
+            className="rounded-lg border border-white/15 bg-transparent px-3 py-2 text-xs text-white/80"
+          >
+            <option value="all">{lang === 'fr' ? 'Build: tous' : 'Build: all'}</option>
+            <option value="open-source">Open-source</option>
+            <option value="no-code">No-code</option>
+            <option value="self-hosted">Self-hosted</option>
+          </select>
+          <select
+            value={popularityFilter}
+            onChange={(e) => setPopularityFilter(e.target.value as 'all' | 'mega' | 'high' | 'medium' | 'low')}
+            className="rounded-lg border border-white/15 bg-transparent px-3 py-2 text-xs text-white/80"
+          >
+            <option value="all">{lang === 'fr' ? 'Popularité: toutes' : 'Popularity: all'}</option>
+            <option value="mega">Mega</option>
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+          </select>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 text-sm">

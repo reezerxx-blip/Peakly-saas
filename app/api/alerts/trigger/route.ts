@@ -10,6 +10,8 @@ export async function POST(request: Request) {
   }
 
   const admin = createSupabaseAdminClient();
+  const payload = (await request.json().catch(() => ({}))) as { dryRun?: boolean };
+  const dryRun = Boolean(payload.dryRun);
 
   const { data: tools, error: toolsError } = await admin
     .from('tools')
@@ -43,7 +45,8 @@ export async function POST(request: Request) {
       const user = Array.isArray(alert.users) ? alert.users[0] : alert.users;
       if (!user?.email) continue;
 
-      await resend.emails.send({
+      if (!dryRun) {
+        await resend.emails.send({
         from: 'Peakly Alerts <alerts@your-domain.com>',
         to: user.email,
         subject: `${tool.name} passe a +${tool.weekly_growth}%`,
@@ -54,10 +57,11 @@ export async function POST(request: Request) {
           <p>Connectez-vous a Peakly pour voir les signaux:</p>
           <p><a href="${env.appUrl}/alerts">Voir mes alertes</a></p>
         `,
-      });
+        });
+      }
       sent += 1;
     }
   }
 
-  return NextResponse.json({ sent });
+  return NextResponse.json({ sent, dryRun });
 }

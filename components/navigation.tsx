@@ -50,6 +50,9 @@ export function Navigation() {
     { href: '/trends', labelFr: 'Tendances', labelEn: 'Trends' },
     { href: '/bubbles', labelFr: 'Bulles', labelEn: 'Bubbles' },
     { href: '/categories', labelFr: 'Categories', labelEn: 'Categories' },
+    { href: '/compare', labelFr: 'Comparateur', labelEn: 'Compare' },
+    { href: '/advisor', labelFr: 'Advisor', labelEn: 'Advisor' },
+    { href: '/collections', labelFr: 'Collections', labelEn: 'Collections' },
     { href: '/alerts', labelFr: 'Alertes', labelEn: 'Alerts' },
     ...(isAuthenticated ? [{ href: '/account', labelFr: 'Compte', labelEn: 'Account' }] : []),
   ];

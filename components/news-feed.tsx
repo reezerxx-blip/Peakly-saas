@@ -15,11 +15,25 @@ function SentimentIcon({ sentiment }: { sentiment: 'positive' | 'neutral' | 'neg
   }
 }
 
-export function NewsFeed({ lang = 'fr' }: { lang?: Language }) {
+export function NewsFeed({
+  lang = 'fr',
+  mode = 'default',
+  keywords = [],
+}: {
+  lang?: Language;
+  mode?: 'default' | 'radar';
+  keywords?: string[];
+}) {
   const dateFormatter = new Intl.DateTimeFormat(lang === 'fr' ? 'fr-FR' : 'en-US', {
     day: '2-digit',
     month: '2-digit',
     year: 'numeric',
+  });
+  const normalizedKeywords = keywords.map((keyword) => keyword.toLowerCase());
+  const items = news.filter((item) => {
+    if (normalizedKeywords.length === 0) return true;
+    const corpus = `${item.title} ${item.summary} ${item.source}`.toLowerCase();
+    return normalizedKeywords.some((keyword) => corpus.includes(keyword));
   });
 
   return (
@@ -27,12 +41,18 @@ export function NewsFeed({ lang = 'fr' }: { lang?: Language }) {
       <div className="flex items-center gap-2 mb-4">
         <AlertCircle className="w-5 h-5 text-accent" />
         <h2 className="font-bold text-lg">
-          {lang === 'fr' ? 'Dernieres actualites' : 'Latest News'}
+          {mode === 'radar'
+            ? lang === 'fr'
+              ? 'Flux AI Radar'
+              : 'AI Radar feed'
+            : lang === 'fr'
+              ? 'Dernieres actualites'
+              : 'Latest News'}
         </h2>
       </div>
 
       <div className="space-y-3 flex-1 overflow-y-auto">
-        {news.map((item) => (
+        {items.map((item) => (
           <a
             key={item.id}
             href={`https://www.google.com/search?q=${encodeURIComponent(`${item.source} ${item.title}`)}`}
@@ -47,6 +67,21 @@ export function NewsFeed({ lang = 'fr' }: { lang?: Language }) {
                   {item.title}
                 </p>
                 <p className="mt-1 text-xs text-muted-foreground">{item.source}</p>
+                {mode === 'radar' && (
+                  <p className="text-[10px] text-accent mt-0.5 uppercase tracking-wide">
+                    {item.sentiment === 'positive'
+                      ? lang === 'fr'
+                        ? 'signal positif'
+                        : 'positive signal'
+                      : item.sentiment === 'negative'
+                        ? lang === 'fr'
+                          ? 'signal negatif'
+                          : 'negative signal'
+                        : lang === 'fr'
+                          ? 'signal neutre'
+                          : 'neutral signal'}
+                  </p>
+                )}
                 <p className="text-xs text-muted-foreground tabular-nums">
                   {dateFormatter.format(new Date(item.date))}
                 </p>

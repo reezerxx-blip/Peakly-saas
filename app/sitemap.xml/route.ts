@@ -10,15 +10,29 @@ export async function GET() {
     '/index',
     '/trends',
     '/categories',
+    '/compare',
+    '/advisor',
+    '/collections',
     '/alerts',
     '/auth',
   ];
 
   // Generate tool routes
   const toolRoutes = tools.map((tool) => `/tool/${tool.id}`);
+  const alternativesRoutes = tools.slice(0, 20).map((tool) => `/alternatives-to/${tool.id}`);
+  const compareRoutes = tools
+    .slice(0, 8)
+    .flatMap((left, idx, arr) =>
+      arr
+        .slice(idx + 1, idx + 3)
+        .map((right) => `/compare/${encodeURIComponent(left.id)}/vs/${encodeURIComponent(right.id)}`)
+    );
+
+  const useCases = ['customer-support', 'content-creation', 'developer-productivity'];
+  const programmaticRoutes = useCases.map((useCase) => `/best-ai-tools-for/${useCase}`);
 
   // Combine all routes
-  const allRoutes = [...staticRoutes, ...toolRoutes];
+  const allRoutes = [...staticRoutes, ...toolRoutes, ...programmaticRoutes, ...alternativesRoutes, ...compareRoutes];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

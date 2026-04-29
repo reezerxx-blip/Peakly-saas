@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import type { Tool } from '@/lib/data';
 import type { Language } from '@/lib/i18n-types';
 import type { DataHealth } from '@/lib/data-health';
+import { discoveryAutocomplete, inferToolTraits, matchesDiscoveryQuery } from '@/lib/tool-discovery';
 
 const TOOL_LOGO_DOMAINS: Record<string, string> = {
   chatgpt: 'openai.com',
@@ -103,6 +104,10 @@ export function BubbleMap({
   const [sortBy, setSortBy] = useState<'trend' | 'growth' | 'adoption' | 'visits' | 'name'>('trend');
   const [sizeBy, setSizeBy] = useState<'trend' | 'growth' | 'adoption' | 'uniform'>('trend');
   const [enterpriseOnly, setEnterpriseOnly] = useState(false);
+  const [query, setQuery] = useState('');
+  const [pricingFilter, setPricingFilter] = useState<'all' | 'free' | 'freemium' | 'paid'>('all');
+  const [apiFilter, setApiFilter] = useState<'all' | 'api' | 'no-api'>('all');
+  const suggestions = useMemo(() => discoveryAutocomplete(tools, query), [tools, query]);
 
   const categories = useMemo(
     () => Array.from(new Set(tools.map((tool) => tool.category))).sort(),
@@ -117,6 +122,7 @@ export function BubbleMap({
           : true
       )
       .filter((tool) => categoryFilter === 'all' || tool.category === categoryFilter)
+      .filter((tool) => matchesDiscoveryQuery(tool, query))
       .filter((tool) => {
         if (trendFilter === 'all') return true;
         if (trendFilter === 'breakthrough') return tool.signalType === 'breakthrough';
@@ -131,8 +137,14 @@ export function BubbleMap({
         if (growthFilter === 'flat') return tool.metrics.monthlyGrowth > -5 && tool.metrics.monthlyGrowth < 5;
         if (growthFilter === 'negative') return tool.metrics.monthlyGrowth <= -5 && tool.metrics.monthlyGrowth > -20;
         return tool.metrics.monthlyGrowth <= -20;
+      })
+      .filter((tool) => (pricingFilter === 'all' ? true : (tool.pricing ?? '').toLowerCase() === pricingFilter))
+      .filter((tool) => {
+        const traits = inferToolTraits(tool);
+        if (apiFilter === 'all') return true;
+        return apiFilter === 'api' ? traits.hasApi : !traits.hasApi;
       });
-  }, [tools, enterpriseOnly, categoryFilter, trendFilter, growthFilter]);
+  }, [tools, enterpriseOnly, categoryFilter, query, trendFilter, growthFilter, pricingFilter, apiFilter]);
 
   const sortedTools = useMemo(() => {
     return [...filteredTools].sort((a, b) => {
@@ -626,6 +638,27 @@ export function BubbleMap({
       </div>
 
       <div className="mb-3 rounded-2xl border border-white/10 bg-[#0d0d1a] p-3">
+        <div className="mb-3 relative">
+          <input
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            placeholder={lang === 'fr' ? 'Recherche semantique (outil, usage, tags...)' : 'Semantic search (tool, use case, tags...)'}
+            className="w-full rounded-xl border border-white/15 bg-[#0a1224] px-3 py-2 text-sm text-white placeholder:text-white/40 focus:border-[#00ff88] focus:outline-none"
+          />
+          {query.trim().length > 0 && suggestions.length > 0 && (
+            <div className="absolute z-20 mt-1 w-full rounded-lg border border-white/10 bg-[#0b0f1d] p-1">
+              {suggestions.map((suggestion) => (
+                <button
+                  key={suggestion}
+                  onClick={() => setQuery(suggestion)}
+                  className="w-full rounded-md px-2 py-1 text-left text-xs text-white/80 hover:bg-white/10"
+                >
+                  {suggestion}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
         <div className="grid grid-cols-1 gap-3 md:grid-cols-3 xl:grid-cols-4">
           <label className="space-y-1.5 text-xs">
             <span className="text-white/70">{lang === 'fr' ? 'Categorie' : 'Category'}</span>
@@ -676,6 +709,31 @@ export function BubbleMap({
               <option value="flat">{lang === 'fr' ? 'Stable (-4% a +4%)' : 'Flat (-4% to +4%)'}</option>
               <option value="negative">{lang === 'fr' ? 'Baisse legere (-5% a -19%)' : 'Mild decline (-5% to -19%)'}</option>
               <option value="crash">{lang === 'fr' ? 'Forte baisse (<= -20%)' : 'Strong decline (<= -20%)'}</option>
+            </select>
+          </label>
+          <label className="space-y-1.5 text-xs">
+            <span className="text-white/70">{lang === 'fr' ? 'Pricing' : 'Pricing'}</span>
+            <select
+              value={pricingFilter}
+              onChange={(event) => setPricingFilter(event.target.value as 'all' | 'free' | 'freemium' | 'paid')}
+              className="w-full rounded-xl border border-white/15 bg-[#0a1224] px-3 py-2 text-sm text-white focus:border-[#00ff88] focus:outline-none"
+            >
+              <option value="all">{lang === 'fr' ? 'Tous les plans' : 'All pricing'}</option>
+              <option value="free">Free</option>
+              <option value="freemium">Freemium</option>
+              <option value="paid">Paid</option>
+            </select>
+          </label>
+          <label className="space-y-1.5 text-xs">
+            <span className="text-white/70">API</span>
+            <select
+              value={apiFilter}
+              onChange={(event) => setApiFilter(event.target.value as 'all' | 'api' | 'no-api')}
+              className="w-full rounded-xl border border-white/15 bg-[#0a1224] px-3 py-2 text-sm text-white focus:border-[#00ff88] focus:outline-none"
+            >
+              <option value="all">{lang === 'fr' ? 'Toutes' : 'All'}</option>
+              <option value="api">{lang === 'fr' ? 'API disponible' : 'Has API'}</option>
+              <option value="no-api">{lang === 'fr' ? 'Sans API' : 'No API'}</option>
             </select>
           </label>
 

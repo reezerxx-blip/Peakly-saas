@@ -6,6 +6,7 @@ import { Search } from 'lucide-react';
 import Link from 'next/link';
 import type { AppTool } from '@/lib/get-tools';
 import type { Language } from '@/lib/i18n-types';
+import { discoveryAutocomplete, inferToolTraits, matchesDiscoveryQuery } from '@/lib/tool-discovery';
 
 type TrendFilter = 'all' | 'hot' | 'rising' | 'stable' | 'declining';
 
@@ -202,19 +203,21 @@ export function CategoriesPremium({
 }) {
   const [query, setQuery] = useState('');
   const [trendFilter, setTrendFilter] = useState<TrendFilter>('all');
+  const [pricingFilter, setPricingFilter] = useState<'all' | 'free' | 'freemium' | 'paid'>('all');
+  const [apiFilter, setApiFilter] = useState<'all' | 'api' | 'no-api'>('all');
+  const suggestions = useMemo(() => discoveryAutocomplete(tools, query), [tools, query]);
 
   const filteredTools = useMemo(() => {
-    const q = query.trim().toLowerCase();
     return tools
       .filter((tool) => (trendFilter === 'all' ? true : signalToTrend(tool.signalType) === trendFilter))
-      .filter((tool) =>
-        q.length === 0
-          ? true
-          : tool.name.toLowerCase().includes(q) ||
-            tool.category.toLowerCase().includes(q) ||
-            tool.description.toLowerCase().includes(q)
-      );
-  }, [tools, query, trendFilter]);
+      .filter((tool) => matchesDiscoveryQuery(tool, query))
+      .filter((tool) => (pricingFilter === 'all' ? true : (tool.pricing ?? '').toLowerCase() === pricingFilter))
+      .filter((tool) => {
+        const traits = inferToolTraits(tool);
+        if (apiFilter === 'all') return true;
+        return apiFilter === 'api' ? traits.hasApi : !traits.hasApi;
+      });
+  }, [tools, query, trendFilter, pricingFilter, apiFilter]);
 
   const categories = useMemo(() => {
     const grouped = new Map<string, AppTool[]>();
@@ -291,6 +294,19 @@ export function CategoriesPremium({
               placeholder={lang === 'fr' ? 'Rechercher un outil...' : 'Search a tool...'}
               className="w-full h-12 pl-11 pr-4 rounded-[50px] bg-white/5 border border-white/15 placeholder:text-white/35 text-white outline-none focus:border-[#ff4d0060] focus:shadow-[0_0_20px_rgba(255,77,0,0.2)]"
             />
+            {query.trim().length > 0 && suggestions.length > 0 && (
+              <div className="absolute z-20 mt-1 w-full rounded-lg border border-white/10 bg-[#0b0f1d] p-1">
+                {suggestions.map((suggestion) => (
+                  <button
+                    key={suggestion}
+                    onClick={() => setQuery(suggestion)}
+                    className="w-full rounded-md px-2 py-1 text-left text-xs text-white/80 hover:bg-white/10"
+                  >
+                    {suggestion}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
           <div className="flex items-center justify-center gap-2 flex-wrap">
             {([
@@ -315,6 +331,25 @@ export function CategoriesPremium({
                 </button>
               );
             })}
+            <select
+              value={pricingFilter}
+              onChange={(e) => setPricingFilter(e.target.value as 'all' | 'free' | 'freemium' | 'paid')}
+              className="px-3 h-9 rounded-full border border-white/15 bg-transparent text-sm text-white/80"
+            >
+              <option value="all">{lang === 'fr' ? 'Pricing: tous' : 'Pricing: all'}</option>
+              <option value="free">Free</option>
+              <option value="freemium">Freemium</option>
+              <option value="paid">Paid</option>
+            </select>
+            <select
+              value={apiFilter}
+              onChange={(e) => setApiFilter(e.target.value as 'all' | 'api' | 'no-api')}
+              className="px-3 h-9 rounded-full border border-white/15 bg-transparent text-sm text-white/80"
+            >
+              <option value="all">{lang === 'fr' ? 'API: tous' : 'API: all'}</option>
+              <option value="api">{lang === 'fr' ? 'API disponible' : 'Has API'}</option>
+              <option value="no-api">{lang === 'fr' ? 'Sans API' : 'No API'}</option>
+            </select>
           </div>
         </div>
 

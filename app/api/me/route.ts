@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { createSupabaseServerClient, createSupabaseAdminClient } from '@/lib/supabase/server';
+import { env } from '@/lib/env';
 
 export async function GET() {
   const supabase = await createSupabaseServerClient();
@@ -34,13 +35,16 @@ export async function GET() {
     profile = result.data ?? null;
   }
 
+  const isOwner = Boolean(env.ownerUserId && user.id === env.ownerUserId);
+  const effectivePlan: 'free' | 'pro' = isOwner ? 'pro' : (profile?.plan ?? 'free');
+
   return NextResponse.json({
     authenticated: true,
     user: {
       id: user.id,
       email: user.email,
       fullName: profile?.full_name ?? user.user_metadata?.full_name ?? null,
-      plan: profile?.plan ?? 'free',
+      plan: effectivePlan,
     },
   });
 }

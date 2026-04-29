@@ -68,5 +68,7 @@ export function verifyLemonSignature(rawBody: string, signatureHeader: string | 
 
   const hmac = crypto.createHmac('sha256', env.lemonWebhookSecret);
   const digest = hmac.update(rawBody).digest('hex');
-  return crypto.timingSafeEqual(Buffer.from(digest), Buffer.from(signatureHeader));
+  const provided = signatureHeader.trim();
+  if (provided.length !== digest.length) return false;
+  return crypto.timingSafeEqual(Buffer.from(digest, 'utf8'), Buffer.from(provided, 'utf8'));
 }
