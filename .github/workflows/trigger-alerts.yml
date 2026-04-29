@@ -1,0 +1,41 @@
+name: Trigger Alerts Pipeline
+
+on:
+  schedule:
+    - cron: "0 7,13,19 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Run without sending emails"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+
+permissions:
+  contents: read
+
+jobs:
+  trigger-alerts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate required secrets
+        run: |
+          test -n "${{ secrets.ALERTS_TRIGGER_URL }}" || (echo "Missing ALERTS_TRIGGER_URL secret" && exit 1)
+          test -n "${{ secrets.ALERTS_CRON_SECRET }}" || (echo "Missing ALERTS_CRON_SECRET secret" && exit 1)
+
+      - name: Trigger alerts endpoint
+        run: |
+          DRY_RUN=false
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            DRY_RUN="${{ inputs.dry_run }}"
+          fi
+
+          echo "Calling alerts trigger with dryRun=${DRY_RUN}"
+          curl --fail-with-body --show-error --silent \
+            -X POST "${{ secrets.ALERTS_TRIGGER_URL }}" \
+            -H "Content-Type: application/json" \
+            -H "x-trigger-secret: ${{ secrets.ALERTS_CRON_SECRET }}" \
+            -d "{\"dryRun\": ${DRY_RUN}}"

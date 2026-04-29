@@ -38,3 +38,8 @@
 - Call `POST /api/alerts/trigger` with header:
   - `x-trigger-secret: <ALERTS_CRON_SECRET>`
 - Configure a cron job (Vercel Cron / GitHub Actions / external scheduler).
+- GitHub Actions ready-made workflow: `.github/workflows/trigger-alerts.yml`
+- Add repository secrets:
+  - `ALERTS_TRIGGER_URL` = `https://your-domain.com/api/alerts/trigger`
+  - `ALERTS_CRON_SECRET` = same value as runtime env `ALERTS_CRON_SECRET`
+- Default schedule is 3x/day (UTC): `07:00`, `13:00`, `19:00`.
