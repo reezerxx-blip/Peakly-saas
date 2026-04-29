@@ -16,6 +16,10 @@ export interface Tool {
   };
   icon?: string;
   website?: string;
+  pricing?: string;
+  monthlyVisits?: number;
+  tags?: string[];
+  githubRepo?: string;
 }
 
 export interface NewsItem {
