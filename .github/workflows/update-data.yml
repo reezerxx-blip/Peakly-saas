@@ -18,6 +18,7 @@ jobs:
       YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
       SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
       SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+      DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
 
     steps:
       - name: Checkout repository
@@ -47,7 +48,7 @@ jobs:
         run: python scripts/sources/fetch_traffic.py
 
       - name: Notify Discord on failure
-        if: failure() && secrets.DISCORD_WEBHOOK != ''
+        if: failure() && env.DISCORD_WEBHOOK != ''
         run: |
           payload='{"content":"❌ Daily data pipeline failed on '${{ github.repository }}' at run '${{ github.run_id }}'."}'
-          curl -X POST -H "Content-Type: application/json" -d "$payload" "${{ secrets.DISCORD_WEBHOOK }}"
+          curl -X POST -H "Content-Type: application/json" -d "$payload" "${{ env.DISCORD_WEBHOOK }}"
